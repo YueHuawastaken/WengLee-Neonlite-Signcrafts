@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { ArrowRight, Play } from "lucide-react";
+import VideoWall3D from "@/assets/3Dvideowall.jpg";
 
 export default function HeroSection() {
   return (
@@ -12,7 +13,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <div className="w-full h-full bg-gradient-to-br from-[#002244]/90 via-[#002244]/70 to-transparent absolute z-10"></div>
         <img 
-          src="https://images.unsplash.com/photo-1551522435-a13afa10f103?w=1920&h=1080&fit=crop"
+          src= {VideoWall3D}
           alt="LED videowall installation"
           className="w-full h-full object-cover"
         />
@@ -27,7 +28,7 @@ export default function HeroSection() {
         </div>
         
         <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
-          Premium LED, Neon &<br />
+          Premium Digital & Static<br />
           <span className="text-[#00FFFF]">Signage Solutions</span>
         </h1>
         
@@ -54,7 +55,7 @@ export default function HeroSection() {
         {/* Trust Signal */}
         <div className="mt-16 flex justify-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl px-8 py-4 text-center">
-            <div className="text-3xl font-bold text-[#00FFFF] mb-1">500+</div>
+            <div className="text-3xl font-bold text-[#00FFFF] mb-1">800+</div>
             <div className="text-sm text-gray-300">Projects Completed</div>
           </div>
         </div>

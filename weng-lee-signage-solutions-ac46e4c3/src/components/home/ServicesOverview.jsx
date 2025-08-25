@@ -25,7 +25,7 @@ const services = [
   },
   {
     icon: Lightbulb,
-    title: "Cold Cathode Lighting",
+    title: "Facade Lighting",
     description: "Elegant, energy-efficient ambient lighting for architectural features that creates stunning visual impact.",
     color: "from-orange-500 to-yellow-500"
   }

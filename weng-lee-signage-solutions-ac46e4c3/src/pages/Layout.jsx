@@ -5,6 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { Phone, Mail, MapPin, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import WengLeeLogo from "@/assets/WLlogo.jpg";
 
 export default function Layout({ children, currentPageName }) {
   const location = useLocation();
@@ -26,9 +27,11 @@ export default function Layout({ children, currentPageName }) {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link to={createPageUrl("Home")} className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-[#002244] to-[#00FFFF] rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">WL</span>
-              </div>
+              <img 
+    src={WengLeeLogo} 
+    alt="Weng Lee Neonlite & Signcrafts" 
+    className="h-12 w-auto" // Adjust height as needed
+  />
               <div>
                 <div className="font-semibold text-[#002244] text-lg leading-tight">Weng Lee</div>
                 <div className="text-xs text-gray-600 leading-tight">Neonlite & Signcrafts</div>
@@ -84,9 +87,11 @@ export default function Layout({ children, currentPageName }) {
             <div className="md:col-span-1">
               {/* Footer Logo */}
               <div className="flex items-center space-x-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-white to-[#00FFFF] rounded-lg flex items-center justify-center">
-                  <span className="text-[#002244] font-bold text-lg">WL</span>
-                </div>
+                  <img 
+    src={WengLeeLogo} 
+    alt="Weng Lee Neonlite & Signcrafts" 
+    className="h-12 w-auto" // Adjust height as needed
+  />
                 <div>
                   <div className="font-semibold text-white text-lg">Weng Lee</div>
                   <div className="text-xs text-gray-300">Neonlite & Signcrafts Pte Ltd</div>

@@ -3,34 +3,38 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { ArrowRight, ExternalLink } from "lucide-react";
+import WilkieEdgeLEDVideowall from "@/assets/6.jpg";
+import DHLLED from "@/assets/Ledsign1.jpg";
+import GoldbelFacadeLighting from "@/assets/goldbel1.jpg";
+import OrchardFacadeSticker from "@/assets/orchardsticker.jpeg";
 
 const featuredProjects = [
   {
     id: 1,
-    title: "Marina Bay LED Videowall",
+    title: "Wilkie Edge LED Videowall",
     category: "LED Videowalls",
-    image: "https://images.unsplash.com/photo-1542296332-2e4473faf563?w=600&h=400&fit=crop",
-    description: "Stunning 50-meter curved LED display creating immersive brand experiences"
+    image: WilkieEdgeLEDVideowall,
+    description: "Stunning 100sqm curved LED display creating immersive brand experiences"
   },
   {
     id: 2,
-    title: "Artisanal Neon Restaurant",
-    category: "Custom Neon",
-    image: "https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?w=600&h=400&fit=crop",
-    description: "Bespoke neon signage bringing vintage charm to modern dining"
+    title: "DHL LED Signage",
+    category: "LED Signage",
+    image: DHLLED,
+    description: "Durable, high-brightness LED display built for DHL's fast-paced logistics environment"
   },
   {
     id: 3,
-    title: "Corporate Channel Letters",
-    category: "Channel Letters",
-    image: "https://images.unsplash.com/photo-1577495508048-b635879837f1?w=600&h=400&fit=crop",
+    title: "Orchard Gateway Facade Sticker",
+    category: "Facade Sticker",
+    image: OrchardFacadeSticker,
     description: "Illuminated channel letters enhancing corporate identity and visibility"
   },
   {
     id: 4,
-    title: "Retail Cold Cathode Lighting",
-    category: "Cold Cathode",
-    image: "https://images.unsplash.com/photo-1555992336-03a23c327c04?w=600&h=400&fit=crop",
+    title: "Goldbel Facade Lighting",
+    category: "Facade Lighting",
+    image: GoldbelFacadeLighting,
     description: "Energy-efficient ambient lighting creating premium retail atmosphere"
   }
 ];

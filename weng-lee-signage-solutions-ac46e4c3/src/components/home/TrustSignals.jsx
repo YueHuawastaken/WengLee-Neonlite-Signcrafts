@@ -6,19 +6,19 @@ const trustMetrics = [
     icon: Clock,
     metric: "50+",
     label: "Years in Business",
-    description: "Proudly serving Singapore since 1970"
+    description: "Proudly serving Singapore since 1969"
   },
   {
     icon: CheckCircle,
-    metric: "500+",
+    metric: "800+",
     label: "Projects Completed",
     description: "Successful installations across Singapore"
   },
   {
     icon: Users,
-    metric: "200+",
+    metric: "1000+",
     label: "Happy Clients",
-    description: "From SMEs to Fortune 500 companies"
+    description: "From SMEs to MNCs"
   },
   {
     icon: Award,
