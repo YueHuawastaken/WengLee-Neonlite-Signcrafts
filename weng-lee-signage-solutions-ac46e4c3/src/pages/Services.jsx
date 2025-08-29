@@ -7,6 +7,8 @@ import Ledvideowall from "@/assets/3.jpg";
 import Neonsign1 from "@/assets/neonsign1.png";
 import sony from "@/assets/sony4.jpg";
 import gen from "@/assets/gen.jpg";
+import SEO from '@/components/seo.jsx';
+import { Helmet } from "react-helmet";
 
 const services = [
   {
@@ -80,7 +82,37 @@ const services = [
 ];
 
 export default function Services() {
+   const servicesSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Signage Installation",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Weng Lee Neonlite & Signcrafts",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "63 Hillview Ave #03-12",
+        "addressLocality": "Singapore",
+        "postalCode": "669569"
+      },
+      "telephone": "+65-6288-0606",
+      "areaServed": "Singapore",
+      "description": "Singapore's leading signage company since 1969 specializing in LED video walls, neon signs, and custom signage solutions."
+    }
+  };
+
   return (
+     <>
+      {/* Add SEO component here */}
+      <SEO 
+        title="Professional Signage Services Singapore | LED Video Walls & Custom Neon Signs"
+        description="Singapore's leading signage company since 1969. Expert LED video wall installation, custom neon signs, channel letters, and facade lighting solutions. Get free quote."
+      />
+       <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(servicesSchema)}
+        </script>
+      </Helmet>
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[#002244] to-[#003366] text-white py-24">
@@ -186,5 +218,6 @@ export default function Services() {
         </div>
       </section>
     </div>
+    </>
   );
 }

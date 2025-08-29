@@ -11,6 +11,7 @@ import PE7 from "@/assets/pe7.jpg";
 import ledvideo from "@/assets/5.jpg";
 import ledvideosm from "@/assets/4.jpg";
 import ledvideolarge from "@/assets/3.jpg";
+import SEO from '@/components/seo.jsx';
 
 const projects = [
   {
@@ -127,6 +128,12 @@ export default function Projects() {
   const featuredProjects = projects.filter(project => project.featured);
 
   return (
+     <>
+      {/* Add SEO component here */}
+      <SEO 
+        title="Our Signage Projects Portfolio | LED Video Walls & Neon Signs Singapore"
+        description="View our portfolio of 200+ successful signage projects in Singapore. LED video walls, custom neon signs, facade lighting, and commercial signage installations since 1969."
+      />
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-[#002244] to-[#003366] text-white py-24">
@@ -403,5 +410,6 @@ export default function Projects() {
         </div>
       )}
     </div>
+    </>
   );
 }
