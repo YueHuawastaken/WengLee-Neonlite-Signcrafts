@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { Phone, Mail, MapPin, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import WengLeeLogo from "@/assets/WLlogo.jpg";
+import WengLeeLogo from "@/assets/WL1.png";
 
 export default function Layout({ children, currentPageName }) {
   const location = useLocation();

@@ -274,27 +274,88 @@ export default function Projects() {
                 
               </div>
             ))}
-           <div className="text-center mt-20">
-  <div className="bg-gradient-to-r from-[#002244]/10 to-[#00FFFF]/10 p-8 rounded-2xl border-2 border-[#00FFFF]/20">
-    <p className="text-xl font-semibold text-gray-700 mb-6">
-      Looking for more inspiration?
-    </p>
-    <a 
-      href="https://www.wlneon.com/index.htm" 
-      target="_blank" 
-      rel="noopener noreferrer"
-      className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#00FFFF] to-cyan-400 text-[#002244] text-lg font-bold rounded-xl hover:from-cyan-400 hover:to-[#00FFFF] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-    >
-      View Our Complete Project Archive
-      <ExternalLink className="ml-3 h-5 w-5" />
-    </a>
-    <p className="text-gray-500 mt-4 text-sm">
-      Browse our extensive collection of past projects
-    </p>
-  </div>
-</div>
+        
           </div>
         </div>
+        <div className="container mx-auto px-6">
+  <div className="text-center mt-20">
+    <div className="bg-gradient-to-r from-[#002244]/10 to-[#00FFFF]/10 p-8 rounded-2xl border-2 border-[#00FFFF]/20">
+      <h3 className="text-2xl font-bold text-[#002244] mb-2">
+        Our Prestigious Project Portfolio
+      </h3>
+      <p className="text-lg text-gray-700 mb-6">
+        With over 50 years of excellence, we've illuminated Singapore's most iconic landmarks
+      </p>
+      
+      <div className="grid md:grid-cols-2 gap-6 text-left max-w-4xl mx-auto">
+        {/* Cold Cathode Projects */}
+        <div className="bg-white/50 p-6 rounded-xl border border-[#00FFFF]/20">
+          <h4 className="font-bold text-[#002244] mb-4 text-lg">🏢 Facade Lighting</h4>
+          <div className="space-y-2 text-sm text-gray-700">
+            {[
+              "Bridges at Singapore River", "Capital Tower (2001)", "City Link at City Hall Underpass (2000)",
+              "Gallery Hotel at Robertson Quay", "Goldbell Tower (1999)", "Kranji Turf Club Race Course (1999)",
+              "Liang Court at River Valley (2001)", "National Library at Stamford Road", "Oasia Hotel (2011)",
+              "One Shenton (2011)", "Robinson Centre at Robinson Road (2001)", "Scotts Square (2012)",
+              "Sentosa Causeway Bridge", "Singapore Indoor Stadium (2001)", "Shangri-la Hotel & Horizon Fitness Centre",
+              "The Heeren Shop (1994)", "The Ritz Carlton Millenia", "Traders Hotel", "Woodlands Checkpoint"
+            ].map((project, index) => (
+              <div key={index} className="flex items-start">
+                <div className="w-1.5 h-1.5 bg-[#00FFFF] rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                <span>{project}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Signage & Billboard Projects */}
+        <div className="bg-white/50 p-6 rounded-xl border border-[#00FFFF]/20">
+          <h4 className="font-bold text-[#002244] mb-4 text-lg">🪧 Signage & Video Walls</h4>
+          <div className="space-y-2 text-sm text-gray-700">
+            {[
+              "Aik Hua Food Court at Sembawang", "Airport Fire Station 2 (2002)", "Bedok Community Library (2001)",
+              "C & P Holding Pte Ltd", "Concorde Hotel (1993)", "CWT Limited (Multiple Projects)",
+              "Esplanade - Theatres on The Bay (2002)", "Far East Plaza at Orchard (1982)", "Fuji Xerox Tower",
+              "Golden Landmark Hotel (1989)", "HDB Neighbourhood Shopping Centers", "Hennessy & Johnnie Walker Islandwide",
+              "HL Bank at Shenton Way (2000)", "Honda Center & Show Rooms", "IBM Tower at Tanjong Pagar (2001)",
+              "JTC Changi South (1999)", "Lam Soon Industrial Building (2005)", "Marine Parade Community Centre",
+              "Martell & Chivas Regal Islandwide", "OUB Centre Video Wall (2014)", "Raffles City and Sogo (1985)",
+              "Singapore Power Building at Somerset (1999)", "Tiger Brewery Singapore", "Toys 'R' Us"
+            ].map((project, index) => (
+              <div key={index} className="flex items-start">
+                <div className="w-1.5 h-1.5 bg-[#00FFFF] rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                <span>{project}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-8 p-4 bg-[#002244]/5 rounded-xl border border-[#00FFFF]/20 max-w-4xl mx-auto">
+        <h4 className="font-bold text-[#002244] mb-3">🌏 International Projects</h4>
+        <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-700">
+          <div>
+            <span className="font-semibold text-[#002244]">Cold Cathode:</span>
+            <div className="mt-1">Sheraton Hotel Labuan, Malaysia</div>
+            <div>Sheraton Hotel Hanoi, Vietnam (1997)</div>
+            <div>Traders Hotel Yangon, Myanmar</div>
+          </div>
+          <div>
+            <span className="font-semibold text-[#002244]">Signage & Billboard:</span>
+            <div className="mt-1">Fuji Film Billboard at Yangon, Myanmar</div>
+            <div>Gan International Airport, Maldives (2005)</div>
+            <div>Male International Airport, Maldives (2002)</div>
+            <div>Sony Advertisement Signage, Myanmar/Vietnam</div>
+          </div>
+        </div>
+      </div>
+
+      <p className="text-gray-500 mt-6 text-sm">
+        Over 200+ successful projects delivered since 1969
+      </p>
+    </div>
+  </div>
+</div>
       </section>
 
       {/* Project Detail Modal/Overlay would go here */}
