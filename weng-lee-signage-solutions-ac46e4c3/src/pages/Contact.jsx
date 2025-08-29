@@ -37,16 +37,49 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+  //   // Simulate form submission
+  //   setTimeout(() => {
+  //     setIsSubmitting(false);
+  //     setIsSubmitted(true);
+  //     setTimeout(() => setIsSubmitted(false), 5000); // Hide success message after 5 seconds
+  //     setFormData({ // Reset form data
+  //       name: "",
+  //       company: "",
+  //       email: "",
+  //       phone: "",
+  //       service: "",
+  //       message: ""
+  //     });
+  //   }, 2000);
+  // };
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+  
+  try {
+    const response = await fetch('https://formspree.io/f/xwpnvajj', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        company: formData.company,
+        email: formData.email,
+        phone: formData.phone,
+        service: formData.service,
+        message: formData.message,
+        _subject: `New Contact Form Submission from ${formData.name}`
+      })
+    });
+    
+    if (response.ok) {
       setIsSubmitted(true);
-      setTimeout(() => setIsSubmitted(false), 5000); // Hide success message after 5 seconds
-      setFormData({ // Reset form data
+      setFormData({
         name: "",
         company: "",
         email: "",
@@ -54,8 +87,13 @@ export default function Contact() {
         service: "",
         message: ""
       });
-    }, 2000);
-  };
+    }
+  } catch (error) {
+    console.error('Error submitting form:', error);
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   return (
     <div className="min-h-screen bg-white">
@@ -86,7 +124,7 @@ export default function Contact() {
                 <SuccessMessage message="Thank you! Your message has been sent successfully. We'll get back to you within 24 business hours." />
               )}
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+         <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -140,6 +178,7 @@ export default function Contact() {
                     />
                   </div>
                 </div>
+                
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -153,8 +192,8 @@ export default function Contact() {
                       <SelectItem value="led-videowall">LED & Videowall</SelectItem>
                       <SelectItem value="neon-sign">Neon Sign</SelectItem>
                       <SelectItem value="custom-signage">Custom Signage</SelectItem>
-                      <SelectItem value="cold-cathode">Cold Cathode</SelectItem>
-                      <SelectItem value="not-sure">Not Sure / Consultation</SelectItem>
+                      <SelectItem value="cold-cathode">Facade Lighting</SelectItem>
+                      <SelectItem value="not-sure">Not Sure / Others</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
