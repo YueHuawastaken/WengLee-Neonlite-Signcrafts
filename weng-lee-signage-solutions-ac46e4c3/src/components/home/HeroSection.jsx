@@ -8,7 +8,7 @@ import VideoWall3D from "@/assets/3Dvideowall.jpg";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+   <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-16">
       {/* Background Video/Image */}
       <div className="absolute inset-0 z-0">
         <div className="w-full h-full bg-gradient-to-br from-[#002244]/90 via-[#002244]/70 to-transparent absolute z-10"></div>

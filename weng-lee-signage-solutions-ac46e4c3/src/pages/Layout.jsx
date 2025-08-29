@@ -1,6 +1,6 @@
+import React, { useState } from "react";
 
-
-import React from "react";
+// import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { Phone, Mail, MapPin, Facebook } from "lucide-react";
@@ -9,6 +9,7 @@ import WengLeeLogo from "@/assets/WL1.png";
 
 export default function Layout({ children, currentPageName }) {
   const location = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   const navigationItems = [
     { name: "Home", path: createPageUrl("Home") },
@@ -34,7 +35,7 @@ export default function Layout({ children, currentPageName }) {
   />
               <div>
                 <div className="font-semibold text-[#002244] text-lg leading-tight">Weng Lee</div>
-                <div className="text-xs text-gray-600 leading-tight">Neonlite & Signcrafts</div>
+                <div className="text-xs text-gray-600 leading-tight">Neonlite & Signcrafts Pte Ltd</div>
               </div>
             </Link>
 
@@ -63,16 +64,57 @@ export default function Layout({ children, currentPageName }) {
             </Link>
 
             {/* Mobile Menu Button */}
-            <button className="md:hidden p-2">
+            {/* <button className="md:hidden p-2">
               <div className="w-6 h-6 flex flex-col justify-center space-y-1">
                 <div className="w-full h-0.5 bg-[#002244]"></div>
                 <div className="w-full h-0.5 bg-[#002244]"></div>
                 <div className="w-full h-0.5 bg-[#002244]"></div>
               </div>
-            </button>
+            </button> */}
+            <button 
+  className="md:hidden p-2"
+  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+>
+  <div className="w-6 h-6 flex flex-col justify-center space-y-1">
+    <div className="w-full h-0.5 bg-[#002244]"></div>
+    <div className="w-full h-0.5 bg-[#002244]"></div>
+    <div className="w-full h-0.5 bg-[#002244]"></div>
+  </div>
+</button>
           </div>
         </div>
       </header>
+      {isMobileMenuOpen && (
+  <div className="md:hidden bg-white border-b border-gray-200 shadow-md">
+    <div className="container mx-auto px-6 py-4">
+      <nav className="flex flex-col space-y-4">
+        {navigationItems.map((item) => (
+          <Link
+            key={item.name}
+            to={item.path}
+            className={`font-medium py-2 transition-colors duration-200 ${
+              location.pathname === item.path
+                ? "text-[#00FFFF]"
+                : "text-[#002244] hover:text-[#00FFFF]"
+            }`}
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            {item.name}
+          </Link>
+        ))}
+        <Link 
+          to={createPageUrl("Contact")} 
+          className="mt-2"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          <Button className="w-full bg-[#00FFFF] text-[#002244] hover:bg-[#00FFFF]/90 font-semibold px-6 py-2 rounded-lg transition-all duration-200">
+            Get Free Quote
+          </Button>
+        </Link>
+      </nav>
+    </div>
+  </div>
+)}
 
       {/* Main Content */}
       <main className="flex-1">
@@ -146,7 +188,7 @@ export default function Layout({ children, currentPageName }) {
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="w-4 h-4 text-[#00FFFF]" />
-                  <a href="mailto:EDY@WLNEON.COM" className="text-gray-300 hover:text-white">EDY@WLNEON.COM</a>
+                  <a href="mailto:WENGLEE@WLNEON.COM" className="text-gray-300 hover:text-white">WENGLEE@WLNEON.COM</a>
                 </div>
                 <div className="flex items-start space-x-2">
                   <MapPin className="w-4 h-4 text-[#00FFFF] mt-0.5" />
