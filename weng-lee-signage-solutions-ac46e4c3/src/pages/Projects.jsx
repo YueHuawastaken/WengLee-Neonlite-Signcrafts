@@ -2,77 +2,119 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Filter } from "lucide-react";
+import featuredLEDvideowall from "@/assets/6.jpg";
+import Neonsign from "@/assets/neonsign.jpg";
+import signage from "@/assets/Ledsign1.jpg";
+import facadelight from "@/assets/neonlight.jpg";
+import LEDvideowall1 from "@/assets/7.jpg";
+import PE7 from "@/assets/pe7.jpg";
+import ledvideo from "@/assets/5.jpg";
+import ledvideosm from "@/assets/4.jpg";
+import ledvideolarge from "@/assets/3.jpg";
 
 const projects = [
   {
     id: 1,
-    title: "Marina Bay Shopping Center LED Wall",
+    title: "LED Video Wall",
     category: "LED & Videowall",
-    image: "https://images.unsplash.com/photo-1542296332-2e4473faf563?w=600&h=400&fit=crop",
-    description: "Stunning 50-meter curved LED display creating immersive brand experiences for premium retail environment.",
-    client: "Marina Bay Development",
-    year: "2024",
-    size: "50m x 8m",
+    image: featuredLEDvideowall,
+    description: "Stunning 100sqm curved LED display creating immersive brand experiences.",
+    client: "" ,
+    year: "",
+    size: "",
     featured: true
   },
   {
     id: 2,
     title: "Heritage Neon Restaurant Signage",
     category: "Neon",
-    image: "https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?w=600&h=400&fit=crop",
-    description: "Artisanal neon signage bringing vintage charm to modern dining experience in Chinatown heritage district.",
-    client: "Old Shanghai Restaurant",
-    year: "2024",
-    size: "Custom fabrication",
+    image: Neonsign,
+    description: "Artisanal neon signage bringing vintage charm to Culture Club",
+    client: "",
+    year: "",
+    size: "",
     featured: true
   },
   {
     id: 3,
-    title: "Corporate Headquarters Channel Letters",
+    title: "DHL Signage",
     category: "Signage",
-    image: "https://images.unsplash.com/photo-1577495508048-b635879837f1?w=600&h=400&fit=crop",
-    description: "Illuminated channel letters enhancing corporate identity and visibility for multinational technology company.",
-    client: "TechCorp Asia",
-    year: "2023",
-    size: "15m building facade",
+    image: signage,
+    description: "Illuminated channel letters enhancing corporate identity and visibility for multinational delivery company.",
+    client: "",
+    year: "",
+    size: "",
     featured: true
   },
   {
     id: 4,
-    title: "Luxury Retail Cold Cathode Lighting",
-    category: "Cold Cathode",
-    image: "https://images.unsplash.com/photo-1555992336-03a23c327c04?w=600&h=400&fit=crop",
-    description: "Energy-efficient ambient lighting creating premium retail atmosphere for high-end fashion boutique.",
-    client: "Luxury Fashion House",
-    year: "2023",
-    size: "2000 sqm retail space",
+    title: "Luxury Hotel Facade Lighting",
+    category: "Facade Lighting",
+    image: facadelight,
+    description: "Energy-efficient ambient lighting creating premium hotel atmosphere for high-end fashion boutique.",
+    client: "",
+    year: "",
+    size: "",
     featured: false
   },
   {
     id: 5,
-    title: "Airport Terminal LED Information Displays",
+    title: "LED VideoWall Movie Displays",
     category: "LED & Videowall",
-    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=400&fit=crop",
-    description: "High-resolution LED displays providing real-time flight information and wayfinding for international terminal.",
-    client: "Changi Airport Group",
-    year: "2023",
-    size: "Multiple installations",
+    image: LEDvideowall1,
+    description: "High-resolution LED displays providing smooth experience for viewers",
+    client: "",
+    year: "",
+    size: "",
     featured: true
   },
   {
     id: 6,
-    title: "Boutique Hotel Neon Art Installation",
+    title: "MNC's Neon Art Installation",
     category: "Neon",
-    image: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=600&h=400&fit=crop",
-    description: "Custom neon art installation creating memorable brand experience for boutique hotel lobby and bar area.",
-    client: "The Heritage Hotel",
-    year: "2024",
-    size: "Lobby & bar installation",
+    image: PE7,
+    description: "Trusted by branded companies 7UP & Pepsi",
+    client: "",
+    year: "",
+    size: "",
     featured: false
-  }
+  },
+   {
+    id: 7,
+    title: "LED VideoWall T Junction",
+    category: "LED & Videowall",
+    image: ledvideo ,
+    description: "High Traffic Installation for greater brand Visibility",
+    client: "",
+    year: "",
+    size: "",
+    featured: true
+  },
+   {
+    id: 8,
+    title: "LED VideoWall Shopping Mall",
+    category: "LED & Videowall",
+    image: ledvideosm ,
+    description: "Shopping Mall Installation",
+    client: "",
+    year: "",
+    size: "",
+    featured: true
+  },
+  {
+    id: 9,
+    title: "Large LED VideoWall installation",
+    category: "LED & Videowall",
+    image: ledvideolarge ,
+    description: "Large Videowall Installation",
+    client: "",
+    year: "",
+    size: "",
+    featured: true
+  },
 ];
 
-const categories = ["All", "LED & Videowall", "Neon", "Signage", "Cold Cathode"];
+const categories = ["All", "LED & Videowall", "Neon", "Signage", "Facade Lighting"];
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -197,6 +239,7 @@ export default function Projects() {
                 className="group cursor-pointer bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1"
                 onClick={() => setSelectedProject(project)}
               >
+                
                 <div className="relative overflow-hidden">
                   <img
                     src={project.image}
@@ -228,8 +271,28 @@ export default function Projects() {
                     <span>{project.year}</span>
                   </div>
                 </div>
+                
               </div>
             ))}
+           <div className="text-center mt-20">
+  <div className="bg-gradient-to-r from-[#002244]/10 to-[#00FFFF]/10 p-8 rounded-2xl border-2 border-[#00FFFF]/20">
+    <p className="text-xl font-semibold text-gray-700 mb-6">
+      Looking for more inspiration?
+    </p>
+    <a 
+      href="https://www.wlneon.com/index.htm" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#00FFFF] to-cyan-400 text-[#002244] text-lg font-bold rounded-xl hover:from-cyan-400 hover:to-[#00FFFF] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+    >
+      View Our Complete Project Archive
+      <ExternalLink className="ml-3 h-5 w-5" />
+    </a>
+    <p className="text-gray-500 mt-4 text-sm">
+      Browse our extensive collection of past projects
+    </p>
+  </div>
+</div>
           </div>
         </div>
       </section>

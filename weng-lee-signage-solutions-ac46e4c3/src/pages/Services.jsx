@@ -3,6 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { Monitor, Zap, PenTool, Lightbulb, CheckCircle, ArrowRight } from "lucide-react";
+import Ledvideowall from "@/assets/3.jpg";
+import Neonsign1 from "@/assets/neonsign1.png";
+import sony from "@/assets/sony4.jpg";
+import gen from "@/assets/gen.jpg";
 
 const services = [
   {
@@ -11,7 +15,7 @@ const services = [
     title: "LED Signs & Videowalls",
     subtitle: "Dynamic Digital Displays",
     description: "Transform any space with our cutting-edge LED technology. From high-resolution videowalls to energy-efficient LED signage, we create dynamic displays that capture attention and drive engagement.",
-    image: "https://images.unsplash.com/photo-1551522435-a13afa10f103?w=800&h=600&fit=crop",
+    image: Ledvideowall,
     features: [
       "Ultra-high resolution displays up to 4K",
       "Indoor and outdoor weatherproof options",
@@ -28,7 +32,7 @@ const services = [
     title: "Custom Neon Signs",
     subtitle: "Artisanal Neon Craftsmanship",
     description: "Blend traditional neon artistry with modern LED neon technology. Our master craftsmen create stunning neon signs that bring timeless elegance and vibrant energy to any environment.",
-    image: "https://images.unsplash.com/photo-1561336313-0bd5e0b27ec8?w=800&h=600&fit=crop",
+    image: Neonsign1,
     features: [
       "Traditional glass tube neon artistry",
       "Modern LED neon alternatives",
@@ -45,7 +49,7 @@ const services = [
     title: "Custom Signage Solutions",
     subtitle: "Channel Letters & Lightboxes",
     description: "From channel letters to illuminated lightboxes, we design and fabricate custom signage that perfectly represents your brand identity and enhances visibility day and night.",
-    image: "https://images.unsplash.com/photo-1577495508048-b635879837f1?w=800&h=600&fit=crop",
+    image: sony,
     features: [
       "3D channel letter fabrication",
       "Illuminated and non-illuminated options",
@@ -57,12 +61,12 @@ const services = [
     applications: ["Corporate buildings", "Retail chains", "Medical centers", "Educational institutions", "Government facilities", "Industrial complexes"]
   },
   {
-    id: "cold-cathode",
+    id: "Facade-Lighting",
     icon: Lightbulb,
-    title: "Cold Cathode Lighting",
+    title: "Facade Lighting",
     subtitle: "Architectural Accent Lighting",
-    description: "Create stunning architectural features with our energy-efficient cold cathode lighting systems. Perfect for accent lighting, cove lighting, and creating ambient atmospheres.",
-    image: "https://images.unsplash.com/photo-1555992336-03a23c327c04?w=800&h=600&fit=crop",
+    description: "Create stunning architectural features with our energy-efficient facade lighting systems. Perfect for accent lighting, cove lighting, and creating ambient atmospheres.",
+    image: gen,
     features: [
       "Ultra-long lifespan (50,000+ hours)",
       "Minimal heat generation",

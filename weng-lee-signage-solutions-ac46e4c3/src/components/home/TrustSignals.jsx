@@ -75,21 +75,8 @@ export default function TrustSignals() {
           <p className="text-center text-gray-400 mb-8 text-sm uppercase tracking-wide">
             Trusted by Singapore's Leading Companies
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-            {/* Placeholder for client logos */}
-            <div className="w-32 h-16 bg-white/10 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold">CLIENT</span>
-            </div>
-            <div className="w-32 h-16 bg-white/10 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold">CLIENT</span>
-            </div>
-            <div className="w-32 h-16 bg-white/10 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold">CLIENT</span>
-            </div>
-            <div className="w-32 h-16 bg-white/10 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold">CLIENT</span>
-            </div>
-          </div>
+         
+         
         </div>
       </div>
     </section>

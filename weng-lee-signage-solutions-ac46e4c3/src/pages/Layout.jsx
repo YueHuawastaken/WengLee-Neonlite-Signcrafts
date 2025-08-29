@@ -130,9 +130,9 @@ export default function Layout({ children, currentPageName }) {
               <ul className="space-y-2 text-sm">
                 <li className="text-gray-300">LED Signs & Videowalls</li>
                 <li className="text-gray-300">Custom Neon Signs</li>
-                <li className="text-gray-300">Channel Letter Signs</li>
-                <li className="text-gray-300">Cold Cathode Lighting</li>
-                <li className="text-gray-300">Lightbox Displays</li>
+                <li className="text-gray-300">Custom Signage</li>
+                <li className="text-gray-300">Facade Lighting</li>
+                <li className="text-gray-300">Facade Stickers</li>
               </ul>
             </div>
 

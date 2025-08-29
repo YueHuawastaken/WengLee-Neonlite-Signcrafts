@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { Award, Users, CheckCircle, ArrowRight } from "lucide-react";
+import neonlight from "@/assets/neonlight.jpg";
 
 const timelineEvents = [
   {
@@ -109,11 +110,11 @@ export default function About() {
               </div>
             </div>
             <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop"
-                alt="Craftsman working on neon sign"
-                className="rounded-2xl shadow-2xl"
-              />
+             <img
+  src={neonlight} // 2. Changed this line - use curly braces
+  alt="Craftsman working on neon sign at Weng Lee Neon"
+  className="rounded-2xl shadow-2xl"
+/>
               <div className="absolute -bottom-6 -left-6 bg-[#00FFFF] text-[#002244] p-6 rounded-2xl shadow-lg">
                 <div className="text-3xl font-bold">50+</div>
                 <div className="text-sm font-semibold">Years of Excellence</div>
@@ -179,55 +180,10 @@ export default function About() {
       </section>
 
       {/* Team Section */}
-      <section className="py-24 bg-[#002244] text-white">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-6">Meet Our <span className="text-[#00FFFF]">Expert Team</span></h2>
-            <p className="text-xl text-gray-300 leading-relaxed mb-16">
-              Our skilled craftsmen, designers, and engineers bring decades of combined experience 
-              to every project, ensuring exceptional results from concept to completion.
-            </p>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-32 h-32 bg-gray-600 rounded-full mx-auto mb-4 overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
-                    alt="Master craftsman"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-bold mb-2">Master Craftsmen</h3>
-                <p className="text-gray-400">Traditional neon artistry and LED expertise</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-32 h-32 bg-gray-600 rounded-full mx-auto mb-4 overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
-                    alt="Design team"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-bold mb-2">Design Specialists</h3>
-                <p className="text-gray-400">Creative vision and technical innovation</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-32 h-32 bg-gray-600 rounded-full mx-auto mb-4 overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
-                    alt="Installation team"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h3 className="text-xl font-bold mb-2">Installation Experts</h3>
-                <p className="text-gray-400">Precision installation and maintenance</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+     
+               
+             
+       
 
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-br from-gray-50 to-white">
